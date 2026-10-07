@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"it.unicam.cs.asdl.slides.ereditarieta","l":"BankAccount"},{"p":"it.unicam.cs.asdl.slides.ereditarieta","l":"CheckingAccount"},{"p":"it.unicam.cs.asdl.slides.ereditarieta","l":"SavingsAccount"},{"p":"it.unicam.cs.asdl.slides.ereditarieta","l":"TimedAccount"}];updateSearchResults();
