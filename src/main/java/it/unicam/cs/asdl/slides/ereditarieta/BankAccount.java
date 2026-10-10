@@ -160,16 +160,21 @@ public abstract class BankAccount implements Comparable<BankAccount> {
      *
      * @param importo ammontare da prelevare, non negativo
      * @throws IllegalArgumentException se {@code importo} è negativo
-     * @throws InsufficientFundException se {@code importo} è maggiore del saldo
+     * @throws InsufficientFundsException se {@code importo} è maggiore del saldo
      *         corrente
      */
     public void withdraw(double importo) {
-        if (importo < 0)
+        // L'importo deve essere un numero finito e non negativo.
+        if (!Double.isFinite(importo) || importo < 0) {
             throw new IllegalArgumentException(
-                    "Tentativo di prelievo di importo negativo");
-        if (importo > saldo)
-            throw new InsufficientFundException(
-                    "Tentativo di prelevare più del posseduto");
+                    "L'importo deve essere finito e non negativo");
+        }
+        // Non è possibile prelevare più del saldo disponibile.
+        if (importo > saldo) {
+            throw new InsufficientFundsException (
+                    "L'importo supera il saldo disponibile");
+        }
+        // eseguo il prelievo
         saldo -= importo;
     }
 
@@ -206,7 +211,7 @@ public abstract class BankAccount implements Comparable<BankAccount> {
      * @param altroConto conto destinatario del trasferimento
      * @throws NullPointerException se {@code altroConto} è {@code null}
      * @throws IllegalArgumentException se {@code importo} è negativo
-     * @throws InsufficientFundException se questo conto non ha saldo sufficiente
+     * @throws InsufficientFundsException se questo conto non ha saldo sufficiente
      */
     public void transfer(double importo, BankAccount altroConto) {
         if (altroConto == null)

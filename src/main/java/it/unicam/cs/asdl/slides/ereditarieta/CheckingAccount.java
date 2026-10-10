@@ -61,7 +61,7 @@ public class CheckingAccount extends BankAccount {
      * in questo modo si riusa la logica di controllo del saldo della
      * superclasse, ma non si incrementa il contatore delle operazioni.
      *
-     * @throws InsufficientFundException se il saldo non copre le commissioni
+     * @throws InsufficientFundsException se il saldo non copre le commissioni
      */
     @Override
     public void endOfMonth() {
@@ -93,7 +93,7 @@ public class CheckingAccount extends BankAccount {
      *
      * @param importo importo da prelevare, non negativo
      * @throws IllegalArgumentException se {@code importo} è negativo
-     * @throws InsufficientFundException se il saldo non è sufficiente
+     * @throws InsufficientFundsException se il saldo non è sufficiente
      */
     @Override
     public void withdraw(double importo) {

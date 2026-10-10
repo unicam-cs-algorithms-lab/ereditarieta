@@ -44,7 +44,7 @@ public class BankAccountTest {
 
         assertThrows(IllegalArgumentException.class, () -> conto.deposit(-1));
         assertThrows(IllegalArgumentException.class, () -> conto.withdraw(-1));
-        assertThrows(InsufficientFundException.class,
+        assertThrows(InsufficientFundsException.class,
                 () -> conto.withdraw(101));
     }
 
@@ -109,7 +109,7 @@ public class BankAccountTest {
         assertThrows(NullPointerException.class, () -> conto.transfer(10, null));
         assertThrows(IllegalArgumentException.class,
                 () -> conto.transfer(-1, altro));
-        assertThrows(InsufficientFundException.class,
+        assertThrows(InsufficientFundsException.class,
                 () -> conto.transfer(101, altro));
     }
 }

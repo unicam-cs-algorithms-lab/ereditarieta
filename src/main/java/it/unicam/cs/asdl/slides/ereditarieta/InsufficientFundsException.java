@@ -8,14 +8,14 @@ package it.unicam.cs.asdl.slides.ereditarieta;
  * possono lanciare la documentano nel Javadoc, ma il chiamante non è obbligato
  * dal compilatore a catturarla con {@code try/catch}.
  */
-public class InsufficientFundException extends RuntimeException {
+public class InsufficientFundsException extends RuntimeException {
 
     private static final long serialVersionUID = 6741919390005964432L;
 
     /**
      * Costruisce l'eccezione senza messaggio specifico.
      */
-    public InsufficientFundException() {
+    public InsufficientFundsException() {
         super();
     }
 
@@ -24,7 +24,7 @@ public class InsufficientFundException extends RuntimeException {
      *
      * @param message messaggio associato all'eccezione
      */
-    public InsufficientFundException(String message) {
+    public InsufficientFundsException(String message) {
         super(message);
     }
 }

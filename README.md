@@ -85,9 +85,9 @@ Se viene effettuato un prelievo mentre il vincolo è ancora in corso, il contegg
 
 Questo esempio mostra una gerarchia a tre livelli e il riuso esplicito del comportamento di fine mese della superclasse tramite `super.endOfMonth()`.
 
-### `InsufficientFundException`
+### `InsufficientFundsException`
 
-`InsufficientFundException` è un'eccezione non controllata usata quando un'operazione richiede più denaro del saldo disponibile.
+`InsufficientFundsException` è un'eccezione non controllata usata quando un'operazione richiede più denaro del saldo disponibile.
 
 ## Test manuale
 

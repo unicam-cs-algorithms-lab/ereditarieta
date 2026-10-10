@@ -44,7 +44,7 @@ public class CheckingAccountTest {
         CheckingAccount conto = new CheckingAccount(100, "Luca", "IT001", 5);
 
         assertThrows(IllegalArgumentException.class, () -> conto.deposit(-1));
-        assertThrows(InsufficientFundException.class, () -> conto.withdraw(200));
+        assertThrows(InsufficientFundsException.class, () -> conto.withdraw(200));
         conto.endOfMonth();
 
         // Nessuna delle due operazioni è stata effettuata davvero, quindi non
@@ -71,6 +71,6 @@ public class CheckingAccountTest {
 
         conto.deposit(0);
 
-        assertThrows(InsufficientFundException.class, () -> conto.endOfMonth());
+        assertThrows(InsufficientFundsException.class, () -> conto.endOfMonth());
     }
 }

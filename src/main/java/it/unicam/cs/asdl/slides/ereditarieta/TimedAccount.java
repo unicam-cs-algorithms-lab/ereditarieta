@@ -112,7 +112,7 @@ public class TimedAccount extends SavingsAccount {
      *
      * @param importo importo da prelevare
      * @throws IllegalArgumentException se {@code importo} è negativo
-     * @throws InsufficientFundException se il saldo non è sufficiente
+     * @throws InsufficientFundsException se il saldo non è sufficiente
      */
     @Override
     public void withdraw(double importo) {
